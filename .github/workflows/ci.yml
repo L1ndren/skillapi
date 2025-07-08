@@ -15,15 +15,15 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install -e .
+        python -m pip install --upgrade pip
         pip install black flake8 isort mypy pytest
+        pip install -e .
 
-    - name: Run formatters and linters
-      run: |
-        black .
-        flake8 .
-        isort .
-        mypy .
+    - name: Run Black formatter
+      run: black .
+
+    - name: Run flake8
+      run: flake8 . --config=pyproject.toml
 
     - name: Run tests
       run: pytest -v

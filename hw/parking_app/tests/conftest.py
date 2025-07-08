@@ -7,9 +7,12 @@ from ..models import Client, Parking
 
 @pytest.fixture
 def app():
-    app = create_app({"SQLALCHEMY_DATABASE_URI": "sqlite:///:memory:",
-                      "TESTING": True})
+    app_config = {
+        'SQLALCHEMY_DATABASE_URI': 'sqlite:///:memory:',
+        'TESTING': True
+    }
 
+    app = create_app(app_config)
     with app.app_context():
         db.create_all()
 
