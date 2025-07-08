@@ -1,9 +1,9 @@
 import pytest
+
 from .factories import ClientFactory, ParkingFactory
-from ..models import Parking
 
 
-@pytest.mark.usefixtures('app')
+@pytest.mark.usefixtures("app")
 def test_client_factory(db_session):
     client = ClientFactory()
     assert client.name is not None
@@ -12,7 +12,7 @@ def test_client_factory(db_session):
     assert isinstance(client.surname, str)
 
 
-@pytest.mark.usefixtures('app')
+@pytest.mark.usefixtures("app")
 def test_parking_factory(db_session):
     parking = ParkingFactory(opened=True)
     assert parking.address is not None

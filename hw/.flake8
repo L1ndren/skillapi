@@ -1,0 +1,8 @@
+[flake8]
+max-line-length = 88  # Синхронизируем с black
+ignore = E203, W503  # Игнорируем правила, конфликтующие с black
+exclude =
+    .venv,
+    __pycache__,
+    migrations,
+    .git
