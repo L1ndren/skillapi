@@ -1,8 +1,5 @@
 [flake8]
-max-line-length = 88  # Синхронизируем с black
-ignore = E203, W503  # Игнорируем правила, конфликтующие с black
-exclude =
-    .venv,
-    __pycache__,
-    migrations,
-    .git
+max-line-length = 88
+extend-ignore = E203, W503
+per-file-ignores =
+    */conftest.py: E501
