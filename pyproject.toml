@@ -7,12 +7,14 @@ authors = [
 ]
 requires-python = ">=3.10"
 dependencies = [
-    "flask==2.0.1",
-    "flask-sqlalchemy==2.5.1",
+    "flask==2.0.3",
+    "flask-sqlalchemy==3.1.1",
+    "sqlalchemy==2.0.2",
     "pytest==8.3.5",
     "factory-boy==3.2.0",
     "faker==8.12.1",
-    "pytest-mock==3.10.0"
+    "pytest-mock==3.10.0",
+    "Werkzeug==2.0.3"
 ]
 
 [tool.black]
