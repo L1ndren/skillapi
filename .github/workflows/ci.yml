@@ -17,15 +17,15 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install flake8 black isort mypy pytest
-        pip install flask==2.0.1 flask-sqlalchemy==2.5.1
-        
+        pip install -e .
+
     - name: Run linters
       run: |
         flake8 . --max-line-length=88
         black --check --line-length 88 .
         isort --check .
         mypy --ignore-missing-imports .
-        
+
     - name: Run tests
       run: |
         pytest -v
