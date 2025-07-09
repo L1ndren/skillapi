@@ -72,7 +72,6 @@ def init_routes(app):
             client_id = data['client_id']
             parking_id = data['parking_id']
 
-            client = Client.query.get_or_404(client_id)
             parking = Parking.query.get_or_404(parking_id)
 
             client_parking = ClientParking.query.filter_by(

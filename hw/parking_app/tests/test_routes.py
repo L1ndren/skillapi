@@ -1,6 +1,4 @@
 import pytest
-from datetime import datetime
-from ..models import Parking
 
 
 @pytest.mark.parametrize('url', ['/clients', '/clients/1'])
